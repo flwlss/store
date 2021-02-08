@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+    <header class="main-header">
+        <main class="container">
+            <nav class="main-nav">
+                <a class="main-nav__logo" href="#"></a>
+                <li class="main-nav__item">
+                    <a href="#">женщины</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#">мужчины</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#">девочки</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#">мальчики</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#">аксессуары</a>
+                </li>
+            </nav>
+        </main>
+    </header>
+    
+    <div id="slider">
+        <div class="slider-wrapper">
+            <a class="radio" href="#" @click="switchView('first')"></a>
+            <a class="radio" href="#" @click="switchView('second')"></a>
+            <a class="radio" href="#" @click="switchView('third')"></a>
+            <a class="radio" href="#" @click="switchView('fourth')"></a>
+        </div>
+        <component :is="currentView" transition="switch"></component>
+    </div>
+
+    <template id="first-slide">
+        <a href="#">
+            <div class="first"></div>
+        </a>
+    </template>
+
+    <template id="second-slide">
+        <div class="second"></div>
+    </template>
+
+    <template id="third-slide">
+        <div class="third"></div>
+    </template>
+
+    <template id="fourth-slide">
+        <div class="fourth"></div>
+    </template>
+
+    <div class="test">
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
